@@ -22,6 +22,10 @@
 * 通过 rpm 模式来安装（断网的话就只能这样咯）；
 * 通过 sh脚本 来安装（不推荐在生产环境使用，不安全）（<a href="https://get.docker.com/">脚本1</a>，<a href="https://test.docker.com/">脚本2</a>）；
 
+<b>名词解释：</b>
+
+* <b>image：</b>可以理解为容器，或者是运行环境，应用程序和依赖，将被打包进 image 文件里；
+
 
 <b>步骤：</b>
 
@@ -39,6 +43,8 @@ sudo yum remove docker \
 ```
 
 一路yes和确定即可；
+
+---
 
 2、开始安装（这里使用的是第一种安装模式）：
 
@@ -64,6 +70,8 @@ sudo yum-config-manager \
 sudo yum install docker-ce docker-ce-cli containerd.io
 ```
 
+---
+
 3、安装完毕，查看 Docker 版本
 
 如果安装成功，以下命令可以查看docker版本
@@ -88,6 +96,8 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 ```
 
 最后一行表示当前 Docker 服务未启动。
+
+---
 
 4、启动Docker
 
