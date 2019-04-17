@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# 挂载外部绑定文件和内部绑定文件
-sudo mount --bind /mysqldata /var/lib/mysql
-# 查看mysql服务的状态，方便调试
-echo `service mysql status`
-echo '1.启动mysql'
-# 启动mysql
-service mysql start
 # 使进程休眠3秒
 sleep 3
+echo "1.等待10秒，确保mysql已经启动了"
+sleep 10
+
 echo `service mysql status`
 
-echo '2.开始导入数据'
+echo "2.开始导入数据"
+
 # 导入sql文件
 mysql < /app/data.sql
 echo '3.导入数据完毕....'
@@ -25,8 +22,4 @@ echo '5.修改密码完毕....'
 
 #sleep 3
 echo `service mysql status`
-echo 'mysql容器启动完毕,且数据导入成功'
-
-# 一直运行，保证docker不会被关闭
-#echo "" >/usr/src/cron.log
-#tail -f /usr/src/cron.log
+echo "mysql容器启动完毕。如果导入数据时，显示 Can't connect to local MySQL server through socket，则说明导入失败。容器外手动执行命令【docker exec mysql-demo sh /app/init.sh】即可"
