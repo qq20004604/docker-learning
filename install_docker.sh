@@ -24,3 +24,9 @@ sudo yum install docker-ce docker-ce-cli containerd.io
 
 echo "【5】查看Docker版本"
 docker version
+
+echo "【6】启动Docker"
+sudo service docker start
+
+echo "【7】显示Docker 镜像，如果没显示"
+docker images
