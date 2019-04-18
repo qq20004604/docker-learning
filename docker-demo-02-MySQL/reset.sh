@@ -6,3 +6,4 @@ docker container rm mysql-v0
 docker image rm mysql-demo:v1
 docker image rm docker-demo-02-mysql:0.0.1
 rm -rf mysqldata
+rm -rf log.log

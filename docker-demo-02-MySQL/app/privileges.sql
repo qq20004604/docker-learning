@@ -1,5 +1,7 @@
 use mysql;
 select host, user from user;
+-- 任意地点的root账号可以用一个非常复杂的密码登录（瞎打的），用于禁止无密码登录
+GRANT ALL ON *.* to root@'%' identified by 'fwefwefvvdsbwrgbr9jj24intwev0h0nbor32fwfmv1' with grant option;
 -- 允许root用户以密码 123456 来登录（仅限本地）
 GRANT ALL ON *.* to root@'localhost' identified by '123456' with grant option;
 -- 将 docker_test_database 数据库的权限授权给创建的docker用户，密码为 1234567890，但只能本机访问（指容器内）
