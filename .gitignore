@@ -67,3 +67,5 @@ typings/
 docker-demo-01-express/node_modules/
 docker-demo-01-express/public/images/
 docker-demo-01-express/public/javascripts/
+docker-demo-02-MySQL/mysqldata/
+
