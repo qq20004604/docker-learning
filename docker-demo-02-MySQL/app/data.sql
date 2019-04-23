@@ -10,8 +10,8 @@ CREATE TABLE `person` (
 	`name` varchar(255) DEFAULT NULL,
 	`age` bigint(20) NOT NULL,
 	PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) DEFAULT CHARSET=utf8;
 -- 插入数据
 INSERT INTO `person` (`id`,`name`,`age` )
 VALUES
-   (0,'Tom',18);
+   (0,'打啊打',18);
