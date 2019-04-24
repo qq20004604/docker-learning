@@ -6,12 +6,12 @@ use docker_test_database;
 -- 建表
 DROP TABLE IF EXISTS `person`;
 CREATE TABLE `person` (
-	`id` bigint(20) NOT NULL,
+	`id` bigint(20) NOT NULL AUTO_INCREMENT,
 	`name` varchar(255) DEFAULT NULL,
 	`age` bigint(20) NOT NULL,
 	PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8;
 -- 插入数据
-INSERT INTO `person` (`id`,`name`,`age` )
+INSERT INTO `person` (`name`,`age` )
 VALUES
-   (0,'打啊打',18);
+   ('打啊打',18);
