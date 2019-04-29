@@ -62,9 +62,7 @@ typings/
 # next.js build output
 .next
 
-.idea*
-.gitignore
-.idea/workspace.xml
+.idea
 docker-demo-01-express/node_modules/
 docker-demo-01-express/public/images/
 docker-demo-01-express/public/javascripts/
