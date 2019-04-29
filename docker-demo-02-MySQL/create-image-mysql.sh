@@ -8,7 +8,7 @@ imagename="docker-demo-02-mysql:0.0.1"
 containername="mysql-demo"
 
 # 建立持久化文件夹
-if [ ! -d $mysqldatafilename ]; then
+if [[ ! -d ${mysqldatafilename} ]]; then
   mkdir "$mysqldatafilename"
 fi
 
