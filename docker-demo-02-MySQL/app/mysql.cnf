@@ -13,3 +13,9 @@ default-character-set = utf8mb4
 
 # [mysqld_safe]
 # default-character-set = utf8mb4
+
+# 慢日志
+long_query_time=2
+log_slow-queries=/var/lib/mysql/mysql_log_slow
+# 错误日志
+log_error=/var/lib/mysql/mysql_log_error
