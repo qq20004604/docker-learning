@@ -43,3 +43,18 @@ tail -f /usr/src/cron.log
 
 这样方便调试，需要看容器运行状况时使用，调试完按 ctrl + z 退出。
 
+### 2、安装依赖时遇见墙
+
+某些依赖，在本机时可以安装，但在容器里时无法安装。原因是往往本机有代理可以访问外网，但容器的网络不经过本机网络。
+
+解决方案：
+
+使用国内镜像。例如 pip 安装依赖时，如下使用
+
+```
+RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+```
+
+其中 ``-i https://mirrors.aliyun.com/pypi/simple/`` 表示使用阿里云镜像。
+
+* ``-i 镜像源``：表示通过指定镜像安装依赖
