@@ -49,6 +49,8 @@ tail -f /usr/src/cron.log
 
 解决方案：
 
+【方法一】
+
 使用国内镜像。例如 pip 安装依赖时，如下使用
 
 ```
@@ -58,3 +60,16 @@ RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com
 其中 ``-i https://mirrors.aliyun.com/pypi/simple`` 表示使用阿里云镜像。
 
 * ``-i 镜像源``：表示通过指定镜像安装依赖
+
+【方法二】
+
+配置 pypi 仓库，具体来说。在文件 ``~/.pip/pip.conf`` 里添加内容
+
+```
+[global]
+index-url=https://mirrors.aliyun.com/pypi/simple/
+[install]
+trusted-host=mirrors.aliyun.com
+```
+
+而 ``~`` 目录一般指 ``/root`` 目录。或者你手动进入容器后，输入 ``cd ~``，然后再通过 ``pwd`` 查看当前目录
