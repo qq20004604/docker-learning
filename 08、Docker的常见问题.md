@@ -52,9 +52,9 @@ tail -f /usr/src/cron.log
 使用国内镜像。例如 pip 安装依赖时，如下使用
 
 ```
-RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 ```
 
-其中 ``-i https://mirrors.aliyun.com/pypi/simple/`` 表示使用阿里云镜像。
+其中 ``-i https://mirrors.aliyun.com/pypi/simple`` 表示使用阿里云镜像。
 
 * ``-i 镜像源``：表示通过指定镜像安装依赖
