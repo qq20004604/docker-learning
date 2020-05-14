@@ -7,6 +7,7 @@ default-character-set=utf8mb4
 # [mysqld]
 # default-character-set = utf8mb4
 # character_set_server = utf8mb4
+skip-name-resolve # Don’t resolve hostnames
 
 [mysql.server]
 default-character-set = utf8mb4
