@@ -17,6 +17,7 @@
 # -exec rm -rf {} \;   表示执行一段shell命令，exec选项后面跟随着所要执行的命令或脚本，然后是一对儿{}，一个空格和一个\，最后是一个分号。
 #数据库备份的位置
 time=` date +%Y_%m_%d_%H:%M:%S`
-filename="$time.zip"
+basepath="/usr/local/web_mysql"
+filename="$basepath/$time.zip"
 echo "$filename"
-zip -r "$filename.zip" mysqldata
+zip -r "$filename" "$basepath/mysqldata"
